@@ -661,6 +661,8 @@ from dual;
 update XX_AMOLMANAGER_XX 
 set manname = 'Amol' where manid = 101 ;
 
+
+
 select e.empname 
 from XXAMOL_EMP_T e 
 join XX_AMOLMANAGER_XX m 
