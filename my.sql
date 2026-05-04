@@ -2,6 +2,7 @@ CREATE TABLE xxamol_dept_t (
     deptempid NUMBER PRIMARY KEY
     
 );
+
 alter table xxamol_dept_t
 add  hod_name varchar2(100);
 alter table xxamol_dept_t
@@ -12,7 +13,7 @@ CREATE TABLE xxamol_emp_t (
     empname VARCHAR2(100) NOT NULL,
     salary  NUMBER CHECK (salary > 10000),
     deptempid  NUMBER,
-    city    VARCHAR2(100),
+    city VARCHAR2(100),
     country VARCHAR2(10) DEFAULT 'IN',
     email   VARCHAR2(100) UNIQUE,
     CONSTRAINT consdeptempid FOREIGN KEY (deptempid)
@@ -635,6 +636,7 @@ from XXAMOL_EMP_T e
 join XXAMOL_DEPT_T d on e.deptid = d.deptid
 join jobtitle j on j.jobtitleid = e.jobtitleid ;
 
+ 
 
 
 
